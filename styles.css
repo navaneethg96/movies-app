@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #22254b;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+header {
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #373b69;
+}
+
+.search {
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    /* text-align: center; */
+    background-color: transparent;
+    border: 2px solid #22254b;
+}
+
+.search::placeholder {
+    color: #eee;
+    font-family: inherit;
+}
+
+.search:focus {
+    outline: none;
+    color: #fff;
+    background-color: #22254b;
+}
+
+.movie {
+    /* height: 400px; */
+    width: 300px;
+    margin: 1.0rem;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    background-color: #373b69;
+}
+
+.movie img {
+    /* width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: inline-block; */
+    max-width: 100%;
+}
+
+.movie-info {
+    display: flex;
+    padding: 0.5rem 1rem 1rem;
+    color: #eee;
+    letter-spacing: 0.5px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    /* padding: 3px; */
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+    background-color: #22254b;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+.movie-info span.orange {  /* there shouldnt be any space  between span tag and color class*/
+    color: orange;
+}
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.overview {
+    /* top: 0; */
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 2rem;
+    max-height: 100%;
+    overflow: auto;
+    position: absolute;
+    font-family: cursive;
+    background-color: #fff;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+}
+
+.overview h3 {
+    margin-top: 0;
+}
+
+.movie:hover .overview{
+    transform: translateY(0%);
+    /* overflow: scroll; */
+    
+}
